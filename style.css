@@ -1,0 +1,173 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body y fuente */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9fafb;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Contenedor principal en dos columnas con flexbox */
+.container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+/* Menú lateral */
+.sidebar {
+  flex: 0 0 220px; /* ancho fijo */
+  background-color: #0a9396;
+  padding: 30px 20px;
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Estilos menú */
+.sidebar h2 {
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: sticky;
+  top: 20px;
+}
+
+.sidebar ul li {
+  margin-bottom: 20px;
+}
+
+.sidebar ul li a {
+  color: #e0f0f0;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  display: block;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a:focus {
+  background-color: #94d2bd;
+  color: #00494d;
+}
+
+/* Contenido principal */
+main {
+  flex: 1;
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Header */
+header h1 {
+  font-size: 2.8rem;
+  color: #005f73;
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+/* Secciones */
+section {
+  margin-bottom: 60px;
+}
+
+h2 {
+  color: #0a9396;
+  font-weight: 600;
+  margin-bottom: 15px;
+  border-bottom: 3px solid #94d2bd;
+  padding-bottom: 8px;
+}
+
+p, ul {
+  color: #444;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+ul ul {
+  list-style-type: circle;
+  margin-top: 8px;
+  padding-left: 20px;
+  color: #666;
+}
+
+footer p {
+  text-align: center;
+  color: #999;
+  font-size: 0.9rem;
+  margin-top: 40px;
+}
+
+/* Contacto */
+section.contacto p {
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+/* Links */
+a {
+  color: #ee6c4d;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+a:hover,
+a:focus {
+  color: #d1495b;
+  text-decoration: underline;
+}
+
+header {
+  position: relative; /* para que .language-switch se posicione relativo al header */
+}
+
+.language-switch {
+  margin-bottom: 30px; /* espacio debajo */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* espacio entre botones */
+}
+
+.language-switch button {
+  background-color: #5a9ea3; /* color suave azul verdoso */
+  border: none;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  flex: 1; /* para que los dos botones tengan igual ancho */
+  max-width: 100px; /* ancho máximo */
+}
+
+.language-switch button:hover {
+  background-color: #3f7a7d; /* color más oscuro al pasar el ratón */
+}
